@@ -58,6 +58,30 @@
             
             observer.observe(statsSection);
         }
+         new Swiper(".valuesSwiper2", {
+    loop: true,
+    speed: 3000,
+    spaceBetween: 18,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true
+    },
+
+    pagination: {
+      el: ".valuesPagination2",
+      clickable: true
+    },
+
+    breakpoints: {
+      0: { slidesPerView: 1.05 },
+      640: { slidesPerView: 1.4 },
+      900: { slidesPerView: 2.2 },
+      1100: { slidesPerView: 3 }
+    }
+  });
         
         // Initialize stats animation
         document.addEventListener('DOMContentLoaded', animateStats);

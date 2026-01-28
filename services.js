@@ -47,7 +47,44 @@
                 navbar.style.backdropFilter = 'none';
             }
         });
-        
+         const servicesSwiper = new Swiper(".servicesSwiper", {
+    loop: true,
+    speed: 3000,
+    spaceBetween: 18,
+    grabCursor: true,
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: false
+    },
+
+    pagination: {
+      el: ".servicesPagination",
+      clickable: true
+    },
+
+    breakpoints: {
+      0: { slidesPerView: 1.05 },
+      640: { slidesPerView: 1.5 },
+      900: { slidesPerView: 2.1 },
+      1100: { slidesPerView: 2.5 }
+    }
+  });
+
+  // Click to jump to details section
+  document.querySelectorAll(".service-card-mini").forEach(card => {
+    card.addEventListener("click", () => {
+      const target = document.querySelector(card.dataset.target);
+      if (!target) return;
+
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // optional: add a quick highlight
+      target.classList.add("service-highlight");
+      setTimeout(() => target.classList.remove("service-highlight"), 900);
+    });
+  });
         // Service card hover effects
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mouseenter', function() {

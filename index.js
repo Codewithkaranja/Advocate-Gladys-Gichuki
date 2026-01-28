@@ -52,7 +52,54 @@
                 disableOnInteraction: false,
             },
         });
-        
+          const counters = document.querySelectorAll(".stat-number");
+
+  const runCounter = (counter) => {
+    const target = Number(counter.dataset.target) || 0;
+    const suffix = counter.dataset.suffix || "";
+
+    const duration = 2000; // total animation time (ms)
+    const startTime = performance.now();
+
+    const update = (time) => {
+      const progress = Math.min((time - startTime) / duration, 1);
+      const current = Math.floor(progress * target);
+
+      counter.textContent = current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        counter.textContent = target + suffix;
+      }
+    };
+
+    requestAnimationFrame(update);
+  };
+
+  // Trigger only when counters are near the viewport (more accurate timing)
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          runCounter(entry.target);
+          observer.unobserve(entry.target); // run once per counter
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "-100px 0px",
+    }
+  );
+
+  counters.forEach((counter) => {
+    // Ensure it starts at 0 before counting
+    const suffix = counter.dataset.suffix || "";
+    counter.textContent = "0" + suffix;
+
+    observer.observe(counter);
+  });
         // Sticky Navbar Background on Scroll
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');

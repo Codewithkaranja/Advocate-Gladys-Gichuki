@@ -40,15 +40,39 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Trusted Legal Excellence with <span>Integrity & Compassion</span></h1>
-            <p>At Gladys Gichuki & Associates Advocates, we provide fearless legal representation grounded in professionalism and respect for human dignity. Justice is not a privilege, but a right accessible to all.</p>
-            <div class="hero-btns">
-                <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
-                <a href="services.html" class="btn btn-secondary">Our Services</a>
-            </div>
+   <section class="hero">
+      <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source
+          src="https://assets.mixkit.co/videos/47602/47602-720.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-container">
+        <div class="hero-visual">
+          <!-- Video clip might sit within this container too if you prefer a framed version -->
+          <!-- But currently the video is full-screen background, we’ll just treat it as left visual area -->
         </div>
+
+        <div class="hero-text">
+          <p class="super-tag">Gladys Gichuki & Associates</p>
+
+          <h1>
+            Trusted <br />
+            Legal<br /><span>Advocates</span>
+          </h1>
+
+          <p>Integrity. Expertise. Results.</p>
+          <!-- <p>Innovate ⭐ Design ⭐ Deliver</p>-->
+
+          <div class="hero-btns">
+            <a href="services.html" class="btn btn-primary">Our Services</a>
+            <a href="contact.html" class="btn btn-outline">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
@@ -112,29 +136,60 @@
     </section>
 
     <!-- About Preview Section -->
-    <section>
-        <div class="section-title">
-            <h2>About Our Firm</h2>
-            <p>Founded on principles of justice, integrity, and client-centered representation</p>
+   <section class="about-section">
+    <!-- Add these decorative lines -->
+    <div class="decorative-line top"></div>
+    <div class="decorative-line bottom"></div>
+    
+    <div class="section-title">
+        <h2>About Our Firm</h2>
+        <p>Founded on principles of justice, integrity, and client-centered representation</p>
+    </div>
+    
+    <div class="about-content">
+        <div class="about-image">
+            <img
+                src="gladys-gichuki-adv-favicon.webp"
+                alt="Gladys Gichuki & Associates Advocates office"
+                loading="lazy"
+            />
         </div>
         
-        <div class="about-content">
-            <div class="about-image">
-                <!-- Image placeholder - in real scenario would be an actual image -->
-                <div style="background-color: var(--light-navy); height: 400px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
-                    Law Firm Image
-                </div>
-            </div>
-            
-            <div class="about-text">
-                <h3 style="color: var(--navy-blue); font-size: 1.8rem; margin-bottom: 20px;">Advocate Gladys Gichuki & Associates</h3>
-                <p style="margin-bottom: 20px; color: #666;">Gladys Gichuki & Associates Advocates is a Nairobi and Machakos-based law firm dedicated to providing strategic, client-focused legal services. With expertise across personal, family, property and business law, we tailor our legal counsel to the real needs of every individual or organization we serve.</p>
-                <p style="margin-bottom: 20px; color: #666;">Our firm is built on the foundation that justice should be accessible to all, regardless of status or circumstance. We combine legal excellence with compassionate understanding of our clients' situations.</p>
-                <p style="margin-bottom: 30px; color: #666;">With a commitment to integrity, clarity, and justice, we guide our clients through complex legal challenges with honesty and skill, ensuring their rights are protected and their voices heard.</p>
-                <a href="about.html" class="btn btn-primary">Learn More About Us</a>
-            </div>
+        <div class="about-text">
+            <h3>Advocate Gladys Gichuki & Associates</h3>
+            <p>Gladys Gichuki & Associates Advocates is a Nairobi and Machakos-based law firm dedicated to providing strategic, client-focused legal services. With expertise across personal, family, property and business law, we tailor our legal counsel to the real needs of every individual or organization we serve.</p>
+            <p>Our firm is built on the foundation that justice should be accessible to all, regardless of status or circumstance. We combine legal excellence with compassionate understanding of our clients' situations.</p>
+            <p>With a commitment to integrity, clarity, and justice, we guide our clients through complex legal challenges with honesty and skill, ensuring their rights are protected and their voices heard.</p>
+            <a href="about.html" class="btn btn-primary">
+                <i class="fas fa-book-open"></i> Learn More About Us
+            </a>
         </div>
-    </section>
+    </div>
+    
+    <!-- Optional: Add stats overlay -->
+   <div class="about-stats">
+  <div class="stat-item">
+    <div class="stat-number" data-target="15" data-suffix="+">0</div>
+    <div class="stat-label">Years Experience</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number" data-target="1000" data-suffix="+">0</div>
+    <div class="stat-label">Cases Handled</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number" data-target="98" data-suffix="%">0</div>
+    <div class="stat-label">Client Satisfaction</div>
+  </div>
+
+  <div class="stat-item">
+    <div class="stat-number" data-target="2">0</div>
+    <div class="stat-label">Office Locations</div>
+  </div>
+</div>
+
+</section>
 
     <!-- Testimonials Section -->
     <section class="section-bg">
@@ -218,7 +273,7 @@
                      <a href="/" class="footer-favicon">
               <img
                 src="gichuki-favicon.webp"
-                alt="Maingi Kiilu Advocates favicon"
+                alt="Gladys Gichuki Advocates favicon"
               />
             </a>
                 </div>

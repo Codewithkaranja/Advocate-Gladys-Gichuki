@@ -1,29 +1,46 @@
- // Mobile menu functionality
-      document
-        .querySelector(".mobile-menu")
-        .addEventListener("click", function () {
-          const nav = document.querySelector("nav ul");
-          nav.classList.toggle("active");
-        });
+// ===============================
+// MOBILE MENU TOGGLE
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const navLinks = document.getElementById("navLinks");
 
-      // Team member hover effects
-      document.querySelectorAll(".team-member").forEach((member) => {
-        member.addEventListener("mouseenter", function () {
-          this.style.transform = "translateY(-15px) scale(1.02)";
-        });
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
 
-        member.addEventListener("mouseleave", function () {
-          this.style.transform = "translateY(0) scale(1)";
-        });
+    // Close menu when a link is clicked (optional but recommended)
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
       });
+    });
+  }
 
-      // Structure member hover effects
-      document.querySelectorAll(".structure-member").forEach((member) => {
-        member.addEventListener("mouseenter", function () {
-          this.style.transform = "translateY(-8px)";
-        });
+  // ===============================
+  // TEAM MEMBER HOVER EFFECTS
+  // ===============================
+  document.querySelectorAll(".team-member").forEach(member => {
+    member.addEventListener("mouseenter", () => {
+      member.style.transform = "translateY(-15px) scale(1.02)";
+    });
 
-        member.addEventListener("mouseleave", function () {
-          this.style.transform = "translateY(0)";
-        });
-      });
+    member.addEventListener("mouseleave", () => {
+      member.style.transform = "translateY(0) scale(1)";
+    });
+  });
+
+  // ===============================
+  // STRUCTURE MEMBER HOVER EFFECTS
+  // ===============================
+  document.querySelectorAll(".structure-member").forEach(member => {
+    member.addEventListener("mouseenter", () => {
+      member.style.transform = "translateY(-8px)";
+    });
+
+    member.addEventListener("mouseleave", () => {
+      member.style.transform = "translateY(0)";
+    });
+  });
+});
