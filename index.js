@@ -76,7 +76,17 @@
 
     requestAnimationFrame(update);
   };
+ const yearEl = document.getElementById("currentYear");
+  const dateEl = document.getElementById("currentDate");
 
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
   // Trigger only when counters are near the viewport (more accurate timing)
   const observer = new IntersectionObserver(
     (entries) => {

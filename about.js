@@ -28,7 +28,18 @@
                 navbar.style.backdropFilter = 'none';
             }
         });
-        
+        //cuurent date and year
+         const yearEl = document.getElementById("currentYear");
+  const dateEl = document.getElementById("currentDate");
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
         // Animate statistics on scroll
         function animateStats() {
             const statNumbers = document.querySelectorAll('.stat-number');

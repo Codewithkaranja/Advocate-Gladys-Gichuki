@@ -845,6 +845,47 @@ a:active {
         font-size: 1rem;
     }
 }
+
+/* wrapper */
+.section-title{
+  text-align:center;
+  margin-bottom:80px;
+  position:relative;
+}
+
+/* heading inside wrapper */
+.section-title h2{
+  font-size:3.5rem;
+  color:#0a1e3a;
+  margin-bottom:20px;
+  font-family:"Garamond","Times New Roman",serif;
+  font-weight:600;
+  letter-spacing:.5px;
+  position:relative;
+  display:inline-block;
+}
+
+.section-title h2::after{
+  content:'';
+  position:absolute;
+  width:120px;
+  height:4px;
+  background:linear-gradient(90deg,#c5a047,transparent);
+  bottom:-15px;
+  left:50%;
+  transform:translateX(-50%);
+  border-radius:2px;
+}
+
+/* optional subtitle */
+.section-title p{
+  max-width:720px;
+  margin:0 auto;
+  color:#4a5568;
+  font-size:1.1rem;
+  line-height:1.7;
+}
+
      /* ===== PREMIUM TEAM MEMBERS SECTION ===== */
 
 /* Team Section */
@@ -1426,6 +1467,9 @@ a:active {
     border: 2px solid white;
     box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
     z-index: 3;
+}
+.member-image img{
+  object-position: center 22%; /* nicer for headshots */
 }
 
 /* Premium Contact CTA */

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ggichukiadvocates.co.ke/sitemap.xml
+Host: ggichukiadvocates.co.ke

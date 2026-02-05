@@ -54,7 +54,17 @@
             // Reset form
             contactForm.reset();
         });
-        
+         const yearEl = document.getElementById("currentYear");
+  const dateEl = document.getElementById("currentDate");
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
         // Form validation
         const formControls = document.querySelectorAll('.form-control');
         formControls.forEach(control => {

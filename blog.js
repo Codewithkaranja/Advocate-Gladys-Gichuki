@@ -42,6 +42,17 @@
             });
         });
         
+         const yearEl = document.getElementById("currentYear");
+  const dateEl = document.getElementById("currentDate");
+
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  }
         // Newsletter form submission
         const newsletterForm = document.querySelector('.newsletter-form');
         const newsletterInput = newsletterForm.querySelector('input[type="email"]');
