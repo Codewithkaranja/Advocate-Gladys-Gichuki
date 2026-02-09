@@ -1124,7 +1124,7 @@ a:active {
         }
 
         .testimonial-content:before {
-            content: "\201C";
+           
             font-size: 4rem;
             color: var(--gold);
             position: absolute;
